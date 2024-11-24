@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-monitor-bot
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-monitor-bot
+  template:
+    metadata:
+      labels:
+        app: web-monitor-bot
+    spec:
+      containers:
+      - name: web-monitor-bot
+        image: web-monitor-telegram-bot:latest
+        ports:
+        - containerPort: 8000
