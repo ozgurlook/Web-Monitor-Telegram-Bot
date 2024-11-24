@@ -18,12 +18,13 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
+        pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run Tests
-      run: python -m unittest discover tests
+      run: python -m unittest discover -s tests -p "*.py"
 
   dockerize-and-run:
     runs-on: ubuntu-latest
