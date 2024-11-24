@@ -1,0 +1,4 @@
+aiogram==3.0.0b7
+aiohttp==3.8.5
+lxml==4.9.3
+nest_asyncio==1.5.6
